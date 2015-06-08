@@ -39,34 +39,40 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.CrossCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.CrossCore.Touch">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.CrossCore.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Touch">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Localization.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross.Binding.Touch\Cirrious.MvvmCross.Binding.Touch.csproj">
+      <Project>{913b13b5-7b2c-4dda-becb-dadc827ed895}</Project>
+      <Name>Cirrious.MvvmCross.Binding.Touch</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross.Binding\Cirrious.MvvmCross.Binding.csproj">
+      <Project>{64dcd397-9019-41e8-a928-e5f5c5df185b}</Project>
+      <Name>Cirrious.MvvmCross.Binding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross.Localization\Cirrious.MvvmCross.Localization.csproj">
+      <Project>{d89351c1-d48f-4ad0-a0b9-353a93425ab7}</Project>
+      <Name>Cirrious.MvvmCross.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\CrossCore\Cirrious.CrossCore.Touch\Cirrious.CrossCore.Touch.csproj">
+      <Project>{bbbcd850-e7cb-4b6c-86d9-ce01f2b1c81c}</Project>
+      <Name>Cirrious.CrossCore.Touch</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\CrossCore\Cirrious.CrossCore\Cirrious.CrossCore.csproj">
+      <Project>{cff6f25a-3c3b-44ee-a54c-2ed4aaff3adb}</Project>
+      <Name>Cirrious.CrossCore</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IHS.MvvmCross.Plugins.Keychain\IHS.MvvmCross.Plugins.Keychain.csproj">
       <Project>{37a89484-2ad5-4bc9-951a-8ac233382529}</Project>
       <Name>IHS.MvvmCross.Plugins.Keychain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
